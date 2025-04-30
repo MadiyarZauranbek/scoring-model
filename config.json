@@ -1,0 +1,44 @@
+{
+    "model_params": {
+        "learning_rate": 0.01,
+        "iterations": 1000,
+        "lambda_reg": 0.1,
+        "verbose": true
+    },
+    "preprocessing_params": {
+        "numerical_cols": [
+            "age",
+            "decline_app_cnt",
+            "good_work",
+            "bki_request_cnt",
+            "income"
+        ],
+        "categorical_cols": [
+            "education",
+            "sex",
+            "car",
+            "car_type",
+            "home_address",
+            "work_address",
+            "foreign_passport"
+        ],
+        "target_col": "default"
+    },
+    "train_params": {
+        "data_path": "data/train-scoring (1).csv",
+        "test_split_ratio": 0.2,
+        "random_state": 42,
+        "cv_folds": 5
+    },
+    "logging": {
+        "log_file": "training.log",
+        "log_level": "INFO"
+    },
+    "output": {
+        "model_path": "credit_scoring_model.pkl",
+        "transformer_path": "data_transformer.pkl",
+        "roc_curve_path": "roc_curve.png",
+        "loss_curve_path": "loss_curve.png",
+        "confusion_matrix_path": "confusion_matrix.png"
+    }
+}
